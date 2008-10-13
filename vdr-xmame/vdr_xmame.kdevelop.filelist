@@ -1,0 +1,9 @@
+# KDevelop Custom Project File List
+Makefile
+actions.cpp
+actions.h
+mainmenu.cpp
+mainmenu.h
+setupmenu.cpp
+setupmenu.h
+xmame.cpp

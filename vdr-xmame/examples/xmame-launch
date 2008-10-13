@@ -1,0 +1,91 @@
+#!/bin/bash
+
+#***************************************************************************
+#*   Copyright (C) 2007 by Thomas Maass                                    *
+#*   inyourface@gmx.de                                                     *
+#*                                                                         *
+#*   This program is free software; you can redistribute it and/or modify  *
+#*   it under the terms of the GNU General Public License as published by  *
+#*   the Free Software Foundation; either version 2 of the License, or     *
+#*   (at your option) any later version.                                   *
+#*                                                                         *
+#*   This program is distributed in the hope that it will be useful,       *
+#*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+#*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+#*   GNU General Public License for more details.                          *
+#*                                                                         *
+#*   You should have received a copy of the GNU General Public License     *
+#*   along with this program; if not, write to the                         *
+#*   Free Software Foundation, Inc.,                                       *
+#*   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+#***************************************************************************
+
+
+
+#This is the launcher for the vdr-xmame plugin
+
+
+
+#Please modify the following lines
+
+#Path to xmame
+XMAME="/usr/games/xmame"
+
+#Joydev name
+JOYDEV="/dev/input/js"
+
+#Joystick type
+# 0 No joystick
+# 1 Standard joystick
+# 5 SDL joystick
+JOYTYPE="1"
+
+#lircrc file
+LIRCRC="/etc/lirc/xmame-lircrc"
+
+#Command to stop VDR
+VDRSTOPCMD="sudo /etc/init.d/vdr stop"
+
+#Command to start VDR
+VDRSTARTCMD="sudo /etc/init.d/vdr start"
+
+
+
+##########Don't touch the following!##########
+
+#Stop VDR if wanted
+STOPVDR=$1
+
+if [ $STOPVDR = "1" ]
+then
+    $VDRSTOPCMD
+    sleep 5
+fi
+
+
+
+#Generate command
+ROMPATH=$2
+ROMNAME=$3
+
+COMMAND="$XMAME -fullscreen -video-mode 1 -lircrc $LIRCRC -rompath $ROMPATH -joydevname $JOYDEV -joytype $JOYTYPE $ROMNAME"
+
+
+
+#Execute command
+export DISPLAY=:0.0
+
+$COMMAND
+
+
+
+#Start VDR if stopping wanted
+if [ $STOPVDR = "1" ]
+then
+    sleep 5
+    $VDRSTARTCMD
+fi
+
+
+
+exit 0

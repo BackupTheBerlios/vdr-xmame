@@ -1,0 +1,94 @@
+#xmame end
+begin
+prog = xmame
+button = TONLINE
+repeat = 0
+config = 1
+end
+
+#xmame 1 player
+begin
+prog = xmame
+button = RED
+repeat = 0
+config = 2
+end
+
+#xmame 2 player
+begin
+prog = xmame
+button = GREEN
+repeat = 0
+config = 3
+end
+
+#xmame insert coin player 1
+begin
+prog = xmame
+button = YELLOW
+repeat = 0
+config = 6
+end
+
+#xmame insert coin player 2
+begin
+prog = xmame
+button = BLUE
+repeat = 0
+config = 7
+end
+
+#xmame menu
+begin
+prog = xmame
+button = MENU
+repeat = 0
+config = 15
+end
+
+#xmame menu up
+begin
+prog = xmame
+button = UP
+repeat = 0
+config = 103
+end
+
+#xmame menu down
+begin
+prog = xmame
+button = DOWN
+repeat = 0
+config = 108
+end
+
+begin
+prog = xmame
+button = LEFT
+repeat = 0
+config = 105
+end
+
+#xmame menu right
+begin
+prog = xmame
+button = RIGHT
+repeat = 0
+config = 6
+end
+
+#xmame enter
+begin
+prog = xmame
+button = OK
+repeat = 0
+config = 28
+end
+
+#xmame pause
+begin
+prog = xmame
+button = PLAY
+repeat = 0
+config = 25
+end

@@ -1,0 +1,39 @@
+xmame.o: xmame.cpp ../../../include/vdr/plugin.h \
+  ../../../include/vdr/i18n.h ../../../include/vdr/tools.h \
+  ../../../include/vdr/menuitems.h ../../../include/vdr/osdbase.h \
+  ../../../include/vdr/config.h ../../../include/vdr/font.h \
+  ../../../include/vdr/osd.h ../../../include/vdr/skins.h \
+  ../../../include/vdr/channels.h ../../../include/vdr/sources.h \
+  ../../../include/vdr/thread.h ../../../include/vdr/epg.h \
+  ../../../include/vdr/keys.h ../../../include/vdr/recording.h \
+  ../../../include/vdr/timers.h ../../../include/vdr/themes.h mainmenu.h \
+  ../../../include/vdr/osdbase.h actions.h setupmenu.h
+mainmenu.o: mainmenu.cpp mainmenu.h ../../../include/vdr/osdbase.h \
+  ../../../include/vdr/config.h ../../../include/vdr/i18n.h \
+  ../../../include/vdr/tools.h ../../../include/vdr/font.h \
+  ../../../include/vdr/osd.h ../../../include/vdr/skins.h \
+  ../../../include/vdr/channels.h ../../../include/vdr/sources.h \
+  ../../../include/vdr/thread.h ../../../include/vdr/epg.h \
+  ../../../include/vdr/keys.h ../../../include/vdr/recording.h \
+  ../../../include/vdr/timers.h ../../../include/vdr/themes.h actions.h \
+  setupmenu.h ../../../include/vdr/plugin.h \
+  ../../../include/vdr/menuitems.h ../../../include/vdr/osdbase.h
+setupmenu.o: setupmenu.cpp setupmenu.h ../../../include/vdr/plugin.h \
+  ../../../include/vdr/i18n.h ../../../include/vdr/tools.h \
+  ../../../include/vdr/menuitems.h ../../../include/vdr/osdbase.h \
+  ../../../include/vdr/config.h ../../../include/vdr/font.h \
+  ../../../include/vdr/osd.h ../../../include/vdr/skins.h \
+  ../../../include/vdr/channels.h ../../../include/vdr/sources.h \
+  ../../../include/vdr/thread.h ../../../include/vdr/epg.h \
+  ../../../include/vdr/keys.h ../../../include/vdr/recording.h \
+  ../../../include/vdr/timers.h ../../../include/vdr/themes.h
+actions.o: actions.cpp actions.h setupmenu.h \
+  ../../../include/vdr/plugin.h ../../../include/vdr/i18n.h \
+  ../../../include/vdr/tools.h ../../../include/vdr/menuitems.h \
+  ../../../include/vdr/osdbase.h ../../../include/vdr/config.h \
+  ../../../include/vdr/font.h ../../../include/vdr/osd.h \
+  ../../../include/vdr/skins.h ../../../include/vdr/channels.h \
+  ../../../include/vdr/sources.h ../../../include/vdr/thread.h \
+  ../../../include/vdr/epg.h ../../../include/vdr/keys.h \
+  ../../../include/vdr/recording.h ../../../include/vdr/timers.h \
+  ../../../include/vdr/themes.h
