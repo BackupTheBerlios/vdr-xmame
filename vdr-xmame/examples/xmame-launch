@@ -29,10 +29,15 @@
 #Please modify the following lines
 
 #Path to xmame
-XMAME="/usr/games/xmame"
+XMAME="/usr/games/xmame.x11"
+#XMAME="/usr/games/xmame.SDL"
+
+
 
 #Joydev name
 JOYDEV="/dev/input/js"
+
+
 
 #Joystick type
 # 0 No joystick
@@ -40,18 +45,22 @@ JOYDEV="/dev/input/js"
 # 5 SDL joystick
 JOYTYPE="1"
 
+
+
 #lircrc file
 LIRCRC="/etc/lirc/xmame-lircrc"
 
+
+
 #Command to stop VDR
 VDRSTOPCMD="sudo /etc/init.d/vdr stop"
+
+
 
 #Command to start VDR
 VDRSTARTCMD="sudo /etc/init.d/vdr start"
 
 
-
-##########Don't touch the following!##########
 
 #Stop VDR if wanted
 STOPVDR=$1
@@ -64,11 +73,14 @@ fi
 
 
 
-#Generate command
 ROMPATH=$2
 ROMNAME=$3
 
+#For X11
 COMMAND="$XMAME -fullscreen -video-mode 1 -lircrc $LIRCRC -rompath $ROMPATH -joydevname $JOYDEV -joytype $JOYTYPE $ROMNAME"
+
+#For SDL
+#COMMAND="$XMAME -fullscreen -lircrc $LIRCRC -rompath $ROMPATH -joydevname $JOYDEV -joytype $JOYTYPE $ROMNAME"
 
 
 
