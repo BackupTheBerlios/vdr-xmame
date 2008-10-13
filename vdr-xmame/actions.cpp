@@ -45,7 +45,7 @@ void cActions::Play(string RomName)
     Command << "/usr/local/bin/xmame-launch ";
     Command << g_XmameSetup.GeneralStopVDR << " " << g_XmameSetup.PathRom << " " << RomName << " &";
 
-    system(Command.str().c_str());
+    SystemExec(Command.str().c_str());
 }
 
 
